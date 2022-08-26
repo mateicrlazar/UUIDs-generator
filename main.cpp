@@ -95,7 +95,7 @@ int main()
     try {
         initialize_nodes();
         // There are some tests that show how this little program works, they can be used by uncommenting them
-        // callers_connecting_to_a_single_node(150, 27) // 150 callers connecting to node 27
+        // callers_connecting_to_a_single_node(150, 27); // 150 callers connecting to node 27
         // callers_connecting_to_a_single_node(100000, 928);
         // callers_connecting_to_random_nodes(500); // 500 callers connecting to random nodes
         // callers_connecting_to_random_nodes(100000);
@@ -103,7 +103,7 @@ int main()
         destroy_nodes();
         return 0;
     }
-    catch (...) // In case the program finishes abnormally, we have to deallocate used memory and store data persistently
+    catch (...) // In case the program finishes abnormally, we still have to deallocate used memory and store data persistently
     {
         destroy_nodes();
         return 1;
