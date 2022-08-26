@@ -30,7 +30,7 @@ void initialize_nodes()
 }
 
 // Deallocating memory and storing the nodes data
-void destroy_nodes()
+void save_nodes()
 {
     // In case the program ends or an error occurs, we will store data in nodes_data.txt and deallocate the memory used by the nodes in the program execution
     std::ofstream fout("nodes_data.txt");
@@ -94,18 +94,18 @@ int main()
 {
     try {
         initialize_nodes();
-        // There are some tests that show how this little program works, they can be used by uncommenting them
-        // callers_connecting_to_a_single_node(150, 27); // 150 callers connecting to node 27
+        // There are some tests that show how this little program works. I commented the large tests because it takes a while to run them.
+        callers_connecting_to_a_single_node(200, 27); // 200 callers connecting to node 27
         // callers_connecting_to_a_single_node(100000, 928);
-        // callers_connecting_to_random_nodes(500); // 500 callers connecting to random nodes
+        callers_connecting_to_random_nodes(300); // 300 callers connecting to random nodes
         // callers_connecting_to_random_nodes(100000);
         // requests_per_second_for_a_node(100000, 592); // sending 100000 requests per second to node 592
-        destroy_nodes();
+        save_nodes();
         return 0;
     }
     catch (...) // In case the program finishes abnormally, we still have to deallocate used memory and store data persistently
     {
-        destroy_nodes();
+        save_nodes();
         return 1;
     }
 }
