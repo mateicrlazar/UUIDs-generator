@@ -31,7 +31,7 @@ unsigned long long Node::prefix_getter()
    3. node_id = 945, prefix = 6103983 --> UUID = 61039830945
    -----------------------------------------------------------------------------------------------------------------------------------------------------
 */
-unsigned long long Node::get_id()
+unsigned long long Node::get_id() // the function doesn't take parameters as we are working with data members of the current Node object
 {
 	prefix++; // incrementing the prefix
 	return prefix * 10000 + node_id; // returning the created UUID (concatenating the prefix and the node's ID)
