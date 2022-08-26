@@ -5,7 +5,7 @@ class Node
 {
 private:
 	unsigned short node_id; // The node's own unique id (a value from 0 to 1023)
-	unsigned long long prefix; // The prefix is a simple counter that is incremented every time a caller requests an UUID
+	unsigned long long prefix; // The node's prefix is a simple counter that is incremented every time a caller requests an UUID
 public:
 	// Helper functions
 	Node(unsigned short _node_if, unsigned long long _prefix); // The constructor will be called each time a node is created/initialized
