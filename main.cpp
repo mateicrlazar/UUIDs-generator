@@ -56,7 +56,7 @@ unsigned long long caller_request_id(Node* connect_node)
    Knowing that a year has 31,536,000 seconds, the node A will run out of UUIDs after 5,849,424 years! So we're safe :)
 */
 
-// Emulate sending no_of_requests for the connect_node per 1 second!
+// Emulate sending a big number of requests for connect_node every 1 second
 void requests_per_second_for_a_node(unsigned no_of_requests, unsigned short connect_node)
 {
     while (true)
@@ -94,9 +94,12 @@ int main()
 {
     try {
         initialize_nodes();
+        // There are some tests that show how this little program works, they can be used by uncommenting them
+        // callers_connecting_to_a_single_node(150, 27) // 150 callers connecting to node 27
         // callers_connecting_to_a_single_node(100000, 928);
+        // callers_connecting_to_random_nodes(500); // 500 callers connecting to random nodes
         // callers_connecting_to_random_nodes(100000);
-        // requests_per_second_for_a_node(100000, 592);
+        // requests_per_second_for_a_node(100000, 592); // sending 100000 requests per second to node 592
         destroy_nodes();
         return 0;
     }
