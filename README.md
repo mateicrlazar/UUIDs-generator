@@ -1,8 +1,8 @@
 # UUIDs-generator
 
 Hello!
-I tried to extend the assignment and make the final solution a little more comprehensive than just implementing the get_id function :)
-I think that, just by looking at the code, everything will be easier to understand.
+I tried to extend the assignment and make the final solution a little more comprehensive than just implementing the get_id function.
+I think that, just by looking at the code, everything will be easier to understand. :)
 So the idea was to design the nodes system as a class that contains some data members which are relevant to our challenge:
 
 - The node.h file contains the Node class definition which models the "template" that helps us define each one of the 1024 system nodes;
