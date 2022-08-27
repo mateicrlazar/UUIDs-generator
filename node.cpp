@@ -1,6 +1,6 @@
 #include "node.h"
 
-// "Initializing" a node's attributes
+// "Initializing" a node's attributes (prefix will be 0 at the first ever creation of the objects)
 Node::Node(unsigned short _node_id, unsigned long long _prefix)
 {
 	node_id = _node_id;
